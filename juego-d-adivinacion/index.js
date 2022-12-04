@@ -3,13 +3,13 @@ function imprimir(frase) {
 }
 
 function juego() {
-  var numeroPensado = Math.round(Math.random() * 10)
+  let numeroPensado = Math.round(Math.random() * 10)
   console.log(numeroPensado)
-  var intentos = 3
-  var contador = 1
+  let intentos = 3
+  let contador = 1
 
   while (contador <= intentos) {
-    var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"))
+    let numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"))
     if (numeroPensado == numeroLanzado) {
       alert(
         "usted acertó, en el intento " +
