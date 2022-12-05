@@ -45,9 +45,34 @@ function imprimir(frase) {
 //-------------------------------------------------------------------------------------------------
 //Carla estaba ayudando a sus colegas a prepararse para la próxima prueba de lógica de la programación. Le pidieron que resolviera la siguiente pregunta que tenía probabilidad de aparecer en la prueba: "lee del mundo HTML un texto escrito por el usuario, y con el clic de un botón muestra lo que se escribió".
 
-function mostrarTexto() {
-  let texto = document.querySelector("input")
-  alert(texto.value)
+// function mostrarTexto() {
+//   let texto = document.querySelector("input")
+//   alert(texto.value)
+// }
+// let button = document.querySelector("button")
+// button.onclick = mostrarTexto
+//--------------------------------------------------------------------------------------------------
+// . El problema es que podemos agregar ingredientes repetidos a una lista de recetas.
+let ingredientes = []
+
+let cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"))
+let contador = 1
+function receta() {
+  while (contador <= cantidad) {
+    let ingrediente = prompt("Informe el ingrediente " + contador)
+    let existe = false
+    for (let posicion = 0; posicion < ingredientes.length; posicion++) {
+      if (ingredientes[posicion] == ingrediente) {
+        existe = true
+        alert("repetido " + ingrediente)
+        break
+      }
+    }
+    if (existe == false) {
+      ingredientes.push(ingrediente)
+      contador++
+    }
+  }
+  document.write(ingredientes)
 }
-let button = document.querySelector("button")
-button.onclick = mostrarTexto
+receta()
