@@ -10,7 +10,7 @@ function sortear(cantidad) {
     let encontrado = false
     if (numeroAleatorio != 0) {
       for (let posicion = 0; posicion < secretos.length.length; posicion++) {
-        if (numeroAleatorio == secreto[posicion]) {
+        if (numeroAleatorio == secretos[posicion]) {
           encontrado = true
           break
         }
